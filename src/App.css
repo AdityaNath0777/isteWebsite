@@ -1,38 +1,451 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cover-page {
+  background: rgb(245, 245, 245);
+  background: radial-gradient(circle, rgb(245, 245, 245) 0%, rgb(235, 225, 193) 83%, rgb(245, 245, 245) 100%);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid transparent;
+}
+.cover-page .navbar {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 100px;
+  border: 1px solid #000;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 50px;
+  position: absolute;
+  left: 20%;
+  top: 5%;
+}
+.cover-page .navbar .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.cover-page .navbar .nav-container a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 25px;
+  background-image: linear-gradient(90deg, yellow, 20%, #d55);
+  background-size: 0 3px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease;
+}
+.cover-page .navbar .nav-container a.active {
+  background-size: 100% 3px;
+}
+.cover-page .cover-page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 200px;
+  margin-top: 300px;
+}
+.cover-page .cover-page-content .cover-page-text {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: start;
+  line-height: 100px;
+}
+.cover-page .cover-page-content .cover-page-text #animated-text {
+  display: inline-block;
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.cover-page .cover-page-content .cover-page-text #animated-text::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  -webkit-animation: move 3s ease-in-out infinite;
+          animation: move 3s ease-in-out infinite;
+}
+@-webkit-keyframes move {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+@keyframes move {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.projects {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: transparent;
+  padding: 100px;
+}
+.projects .projects-header {
+  text-align: center;
+  font-weight: bold;
+  height: 200px;
+  padding: 50px;
+  padding-top: 0;
+  text-align: start;
+  position: relative;
+}
+.projects .projects-header h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.projects .projects-header p {
+  font-size: 20px;
+}
+.projects .project-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.projects .project-container .project {
+  background-color: #fff;
+  color: #000;
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+  padding: 20px;
+  text-align: start;
+  border: 1px solid red;
+  transform: scale(1);
+  -webkit-animation: scale 1s ease-in-out forwards;
+          animation: scale 1s ease-in-out forwards;
+  cursor: pointer;
+}
+.projects .project-container .project p {
+  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.7;
+  line-height: 30px;
+}
+.projects .project-container .project:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(90deg, #ffffdd, 20%, #ddbbbb);
+}
+
+.events {
+  width: 100vw;
+  color: white;
+  padding: 100px;
+  padding-top: 0;
+  background-blend-mode: soft-light;
+}
+.events .events-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 0 50px;
+  text-align: start;
+  position: relative;
+}
+.events .events-header h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.events .events-header p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.events .events-container {
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  flex-direction: column;
+  margin: 50px;
+}
+.events .events-container .event {
+  color: #fff;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  transition: 0.5s;
+  padding: 10px;
+  padding-left: 0;
+  text-align: start;
+  margin: 20px;
+  margin-left: 0;
+  position: relative;
+}
+.events .events-container .event .img {
+  width: 150px;
+  height: 120px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  background-color: #aaa;
+  border-radius: 5px;
+}
+.events .events-container .event .event-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.events .events-container .event .event-info h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.events .events-container .event .event-info p {
+  font-size: 20px;
+  opacity: 0.7;
+}
+.events .events-container .event .event-date {
+  text-align: center;
+  font-size: 40px;
+  width: 150px;
+}
+.events .events-container .event::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  -webkit-animation: event-footer 3s ease-in-out infinite;
+          animation: event-footer 3s ease-in-out infinite;
+}
+@-webkit-keyframes event-footer {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 40%;
+  }
+}
+@keyframes event-footer {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 40%;
+  }
+}
+
+.alumini {
+  width: 100vw;
+  background-color: #fff;
+  color: black;
+  padding: 100px 200px 0 200px;
+  text-align: center;
+}
+.alumini .alumini-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 0 50px;
+  text-align: start;
+  position: relative;
+}
+.alumini .alumini-header h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.alumini .alumini-header h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+.alumini .alumini-header span {
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.alumini .alumnus-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: space-evenly;
+  flex-direction: column;
+  margin: 50px;
+}
+.alumini .alumnus-container .alumnus {
+  color: black;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  transition: 0.5s;
+  padding: 10px;
+  padding-left: 0;
+  text-align: start;
+  margin: 20px;
+  margin-left: 0;
+  position: relative;
+}
+.alumini .alumnus-container .alumnus .img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+.alumini .alumnus-container .alumnus .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.alumini .alumnus-container .alumnus .info h3 {
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.alumini .alumnus-container .alumnus .info p {
+  font-size: 20px;
+  opacity: 0.7;
+}
+.alumini .alumnus-container .alumnus .event-date {
+  text-align: center;
+  font-size: 40px;
+  width: 150px;
+}
+.alumini .alumnus-container .event::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  -webkit-animation: event-footer 3s ease-in-out infinite;
+          animation: event-footer 3s ease-in-out infinite;
+}
+@keyframes event-footer {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 40%;
+  }
+}
+.alumini #joinUs {
+  font-size: 20px;
+  padding: 10px 50px;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #000;
+  margin-bottom: 50px;
+  border: 2px solid #000;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.alumini #joinUs:hover {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-blend-mode: overlay;
+  background: radial-gradient(circle at 50% 60%, rgba(255, 200, 58, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(204, 80, 54, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 45%, rgba(184, 233, 134, 0.2) 0%, transparent 40%), linear-gradient(90deg, rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.3));
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-content .img {
+  background: url(../public/Images/joinUs.jpg);
+  width: 600px;
+  height: 400px;
+  background-size: cover;
+}
+.footer-content button {
+  font-size: 25px;
+  padding: 20px 50px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-bottom: 50px;
+  color: white;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background-color 0.2s ease;
+}
+.footer-content button:hover {
+  background-color: white;
+  color: black;
+}
+.footer-links {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.footer-links span {
+  display: inline-block;
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+.footer-links span:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.viewMore {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.2s;
 }
+.viewMore:hover {
+  opacity: 1;
+  background: linear-gradient(90deg, yellow, 20%, #d55);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=App.css.map */
