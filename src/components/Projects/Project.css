@@ -1,0 +1,27 @@
+.projectDesc{
+    width: 90%;
+    color: white;
+    background-color: black !important;
+    margin: auto;
+    background-color: transparent;
+    padding: 100px;
+}
+
+.projectDesc .projectDesc-header{
+    text-align: center;
+    font-weight: bold;
+    height: 200px;
+    padding: 50px;
+    padding-top: 0;
+    text-align: start;
+    position: relative;
+}
+
+.projectDesc .projectDesc-header h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.projectDesc .projectDesc-header p{
+    font-size: 20px;
+    font-weight: normal;
+}
