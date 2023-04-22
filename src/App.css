@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #000 !important;
   overflow-x: hidden;
   font-family: sans-serif;
 }
@@ -50,6 +50,10 @@ body {
 .cover-page .navbar .nav-container a.active {
   background-size: 100% 3px;
 }
+
+.nav-container li{
+  list-style: none;
+}
 .cover-page .cover-page-content {
   display: flex;
   justify-content: space-between;
@@ -74,30 +78,36 @@ body {
 .cover-page .cover-page-content .cover-page-text #animated-text::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 10%;
   background: linear-gradient(90deg, yellow, 20%, #d55);
   height: 5px;
   bottom: -10px;
   left: 0;
-  -webkit-animation: move 3s ease-in-out infinite;
-          animation: move 3s ease-in-out infinite;
+  right: 0;
+  transition: width 0.25s ease-out;
 }
-@-webkit-keyframes move {
-  0%, 100% {
+.cover-page .cover-page-content .cover-page-text #animated-text:hover::before {
+ 
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+/* @-webkit-keyframes move {
+  0% {
     width: 0;
   }
-  50% {
+  100% {
     width: 100%;
   }
 }
 @keyframes move {
-  0%, 100% {
+  0% {
     width: 0;
   }
-  50% {
+  100% {
     width: 100%;
   }
-}
+} */
 
 .projects {
   width: 100vw;

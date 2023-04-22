@@ -4,7 +4,7 @@ import { AluminiProto } from './Alumni';
 import { useEffect } from 'react';
 import { appendScript } from '../AppendScript';
 
-const Home = () => {
+const BelowCP = () => {
     useEffect(() => {
         appendScript('./gradientBackground.js');
         appendScript('./navLinksAnimate.js');
@@ -18,4 +18,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default BelowCP;
