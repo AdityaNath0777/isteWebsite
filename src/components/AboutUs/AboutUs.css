@@ -1,0 +1,28 @@
+.aboutCover{
+    width: 90%;
+    
+    color: white;
+    background-color: black !important;
+    margin: auto;
+    background-color: transparent;
+    padding: 100px;
+}
+
+.aboutCover .aboutCover-header{
+    text-align: center;
+    font-weight: bold;
+    height: 200px;
+    padding: 50px;
+    padding-top: 0;
+    text-align: start;
+    position: relative;
+}
+
+.aboutCover .aboutCover-header h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+.aboutCover .aboutCover-header p {
+    font-size: 20px;
+    font-weight: normal;
+  }
