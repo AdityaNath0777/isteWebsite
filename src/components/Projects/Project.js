@@ -3,7 +3,7 @@ import { appendScript } from "../../AppendScript";
 import { Box, Image, Text } from "@chakra-ui/react";
 import Navbar from "../Navbar";
 import './Project.css'
-import {projectss1, projectss2, softech} from '../Alumni/images'
+import {projectss1, softech} from '../Alumni/images'
 const Project = () => {
   useEffect(() => {
     appendScript("./gradientBackground.js");
