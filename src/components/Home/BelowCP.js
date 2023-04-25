@@ -1,8 +1,8 @@
-import { ProjectsProto } from './Projects';
-import { EventsProto } from './Events';
-import { AluminiProto } from './Alumni';
+import { ProjectsProto } from '../Projects';
+import { EventsProto } from '../Events';
+import { AluminiProto } from '../Alumni';
 import { useEffect } from 'react';
-import { appendScript } from '../AppendScript';
+import { appendScript } from '../../AppendScript';
 
 const BelowCP = () => {
     useEffect(() => {
