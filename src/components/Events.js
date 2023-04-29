@@ -1,6 +1,6 @@
 export const EventsProto = () => {
     return (
-        <div className="events">
+        <div className="events gradBg">
             <div className="events-header">
                 <h1>Events</h1>
                 <p>Here are some events that we have planned for the future:</p>

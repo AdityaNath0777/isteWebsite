@@ -3,12 +3,22 @@ import Navbar from "../Navbar";
 import { appendScript } from "../../AppendScript";
 import "./AboutUs.css";
 import { Box, Text } from "@chakra-ui/react";
+import { Icon } from '@chakra-ui/icons'
+import { List, ListItem, ListIcon } from '@chakra-ui/react'
 
 const AboutUs = () => {
   useEffect(() => {
     appendScript("./gradientBackground.js");
     appendScript("./navLinksAnimate.js");
   }, []);
+  const CircleIcon = (props) => (
+    <Icon viewBox='0 0 200 200' {...props}>
+      <path
+        fill='currentColor'
+        d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
+      />
+    </Icon>
+  )
   return (
     <Box className="aboutPage">
       <div className="cover-page">
@@ -19,6 +29,7 @@ const AboutUs = () => {
             <span id="animated-text"> doing things</span>
           </div>
           <iframe
+            title="gif"
             src="https://giphy.com/embed/WXmx86CVrJAOEwwjPu"
             width="300"
             height="300"
@@ -67,6 +78,7 @@ const AboutUs = () => {
           </Box>
         </div>
         <Box
+          className="about-perks-section"
           display={"flex"}
           w="100%"
           justifyContent={"space-between"}
@@ -79,22 +91,51 @@ const AboutUs = () => {
             flexDir={"column"}
             w={{ base: "100%", md: "50%", lg: "70%" }} //responsive width
           >
-            <Text mb="3">
+            <Text mb="3" fontSize='1.1rem' >
               ISTE continues to be a leading non-profit making professional body in engineering in India.
             </Text>
-            <Text mb="3">
+            <Text mb="3" fontSize='1.1rem' >
               Membership fees: One time fees for becoming a member for 4 years(All members will be provided the membership card, certificate of membership and login Id for online support)
             </Text>
             <Text mb="3">
-              <ul>
-                <li> A Member of a National Professional Organization. </li>
-                <li>Joined an academic Fraternity of over 45,000 strong professional.</li>
-                <li>Preference to attend short-term training programme for the academic excellence and to become eligible for career advancement opportunities. </li>
-                <li>Getting bi-monthly Newsletter. </li>
-                <li>Quarterly Indian journal of Technical Education (at concessional rates). </li>
-                <li>Many more publications for Self Development, Institution Development etc (at concessional rates). </li>
-                <li>Eligible to participate in Chapter level, Section level and National Navel Conferences, Workshops and other activities of your academic interest etc.</li>
-              </ul>
+              <List spacing={3} >
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}>
+                  <ListIcon as={CircleIcon} />
+                  <Text mb="3">
+                    A Member of a National Professional Organization.
+                  </Text>
+                </ListItem>
+
+                <ListItem
+                  style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}
+                >
+                  <ListIcon as={CircleIcon} />
+                  Joined an academic Fraternity of over 45,000 strong professional.
+                </ListItem>
+
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }} >
+                  <ListIcon as={CircleIcon} />
+                  Preference to attend short-term training programme for the academic excellence and to become eligible for career advancement opportunities.
+                </ListItem>
+
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }} >
+                  <ListIcon as={CircleIcon} />
+                  Getting bi-monthly Newsletter. </ListItem>
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }} >
+                  <ListIcon as={CircleIcon} />
+                  Quarterly Indian journal of Technical Education (at concessional rates).
+                </ListItem>
+
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }} >
+                  <ListIcon as={CircleIcon} />
+                  Many more publications for Self Development, Institution Development etc (at concessional rates).
+                </ListItem>
+
+                <ListItem style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', alignItems: 'baseline' }} >
+                  <ListIcon as={CircleIcon} />
+                  Eligible to participate in Chapter level, Section level and National Navel Conferences, Workshops and other activities of your academic interest etc.
+                </ListItem>
+              </List>
             </Text>
           </Box>
         </Box>
