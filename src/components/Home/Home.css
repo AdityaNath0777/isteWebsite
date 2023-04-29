@@ -204,17 +204,6 @@ body {
   .events .events-container .event::before {
     content: "";
     position: absolute;
-    /* width: ; */
-    background: linear-gradient(90deg, yellow, 20%, #d55);
-    height: 5px;
-    bottom: -10px;
-    left: 0;
-    transition: width 2s ease-in-out;
-    /* animation: event-footer 3s ease-in-out; */
-
-
-    content: "";
-    position: absolute;
     width: 9.7%;
     background: linear-gradient(90deg, yellow, 20%, #d55);
     height: 5px;
@@ -222,6 +211,7 @@ body {
     left: 0;
     right: 0;
     transition: width 0.5s ease-out;
+    /* animation: event-footer 3s ease-in-out; */
   }
 
   .events .events-container .event:hover::before{
