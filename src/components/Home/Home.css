@@ -204,21 +204,28 @@ body {
   .events .events-container .event::before {
     content: "";
     position: absolute;
-    width: 36%;
+    width: 10%;
     background: linear-gradient(90deg, yellow, 20%, #d55);
     height: 5px;
     bottom: -10px;
     left: 0;
-    animation: event-footer 3s ease-in-out;
+    transition: width 2s ease-in-out;
+    /* animation: event-footer 3s ease-in-out; */
   }
-  @-webkit-keyframes event-footer {
+
+  .events .events-container .event::before:hover{
+    content: "";
+    width: 100%;
+    
+  }
+  /* @-webkit-keyframes event-footer {
     0%, 100% {
       width: 0;
     }
     50% {
       width: 40%;
     }
-  }
+  } */
 
   
   .alumini {

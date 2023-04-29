@@ -1,0 +1,19 @@
+.alumini{
+    background: #000;
+}
+
+.alumini::before{
+    content: "";
+    background: radial-gradient(
+        circle at 90% 80%,
+        rgba(255,200,58, 0.2) 0%,
+        transparent 20%
+      ),;
+}
+
+.alumini-header h1, .alumini-header h3{
+    color: #fff;
+}
+.alumnus .info{
+    color:#fff !important;
+}
