@@ -46,7 +46,7 @@ body {
     bottom: -10px;
     left: 0;
     right: 0;
-    transition: width 0.25s ease-out;
+    transition: width 0.3s ease-out;
   }
   .cover-page .cover-page-content .cover-page-text #animated-text:hover::before {
    
@@ -204,18 +204,32 @@ body {
   .events .events-container .event::before {
     content: "";
     position: absolute;
-    width: 10%;
+    /* width: ; */
     background: linear-gradient(90deg, yellow, 20%, #d55);
     height: 5px;
     bottom: -10px;
     left: 0;
     transition: width 2s ease-in-out;
     /* animation: event-footer 3s ease-in-out; */
+
+
+    content: "";
+    position: absolute;
+    width: 9.7%;
+    background: linear-gradient(90deg, yellow, 20%, #d55);
+    height: 5px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    transition: width 0.5s ease-out;
   }
 
-  .events .events-container .event::before:hover{
+  .events .events-container .event:hover::before{
     content: "";
-    width: 100%;
+    width: 90%;
+    left: 0;
+    right: auto;
+    /* transition: width 1s ease-in-out; */
     
   }
   /* @-webkit-keyframes event-footer {
@@ -228,7 +242,7 @@ body {
   } */
 
   
-  .alumini {
+  .home-page .alumini {
     width: 100vw;
     background-color: #fff;
     color: black;
