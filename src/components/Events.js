@@ -8,18 +8,19 @@ export const EventsProto = () => {
             </div>
             <div className="events-container">
                 <div className="event">
-                    <div className="img"></div>
+                    <img className='img' src={process.env.PUBLIC_URL + "/events/robo_rumble.png"} alt="robombule event" />
                     <div className="event-info">
-                        <h3>Relive Indie-Pop</h3>
-                        <p>An Amazing and Neverseen-Before event in our college at which students can showcase their indie talent and also an amazing concert by your favorite Pop-Singer.</p>
+                        <h3>Robo Rumble</h3>
+                        <p>Robotics competition set up to provide aspiring roboticists with a chance to demonstrate their know-how in the subject.
+                            Participants in this robotics competition bring their robots to the arena to compete in races and one-on-one combat. Pushing the opponent's robot off the arena and scoring the most points are the goals. There will be defined start and elimination zones for the competition.</p>
                     </div>
                     <div className="event-date">1 Oct</div>
                 </div>
                 <div className="event">
-                    <div className="img"></div>
+                <img className='img' src={process.env.PUBLIC_URL + "/events/tri-pysc-el.jpg"} alt="tri-pysc-el event" />
                     <div className="event-info">
-                        <h3>Mera Dost Alumni</h3>
-                        <p>An interactive event where you can have a nice and friendly talk with our prestigeous and humble alumni as they give insights of what you are and will be doing and its importance.</p>
+                        <h3>TRI - PSYCH - EL </h3>
+                        <p>Technological and cultural Ideathon with mental health as the focus. The competition consists of four rounds, during which the competitors' technical proficiency, public speaking prowess, and understanding of mental health will be evaluated. There is no elimination round; instead, competitors will be evaluated based on the judges' overall report.</p>
                     </div>
                     <div className="event-date">2 Oct</div>
                 </div>

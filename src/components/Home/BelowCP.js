@@ -1,4 +1,4 @@
-import { ProjectsProto } from '../Projects';
+import { SubChaptersProto } from '../SubChapters';
 import { EventsProto } from '../Events';
 import { AluminiProto } from '../Alumni';
 import { useEffect } from 'react';
@@ -11,7 +11,7 @@ const BelowCP = () => {
     }, [])
     return (
         <>
-            <ProjectsProto />
+            <SubChaptersProto />
             <EventsProto />
             <AluminiProto />
         </>

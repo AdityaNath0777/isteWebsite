@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 200px;
+    height: 46vh;
     margin-top: 300px;
   }
   .cover-page .cover-page-content .cover-page-text {
@@ -54,75 +55,79 @@ body {
     left: 0;
     right: auto;
   }
-  /* @-webkit-keyframes move {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  @keyframes move {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  } */
   
   .projects {
     width: 100vw;
-    height: 100vh;
     color: white;
     background-color: transparent;
-    padding: 100px;
+    padding: 5rem;
   }
   .projects .projects-header {
     text-align: center;
     font-weight: bold;
-    height: 200px;
-    padding: 50px;
+    height: 10rem;
     padding-top: 0;
     text-align: start;
     position: relative;
   }
   .projects .projects-header h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
   .projects .projects-header p {
     font-size: 20px;
+    font-weight: 400;
   }
   .projects .project-container {
     display: flex;
+    align-items: stretch;
     justify-content: space-evenly;
-    align-items: center;
   }
   .projects .project-container .project {
     background-color: #fff;
     color: #000;
-    width: 400px;
-    height: 250px;
+    width: 30%;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     transition: transform 0.3s ease, background-image 0.3s ease;
-    padding: 20px;
+    padding: 1rem;
     text-align: start;
     border: 1px solid red;
+    margin: 1rem;
     transform: scale(1);
     -webkit-animation: scale 1s ease-in-out forwards;
             animation: scale 1s ease-in-out forwards;
-    cursor: pointer;
+    cursor: default;
   }
   .projects .project-container .project p {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 1rem;
     opacity: 0.7;
     line-height: 30px;
+  }
+  .projects .project-container .project h2{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .projects .project-container .project img{
+       height: 10rem;
+    border-style: none;
+    width: 10rem;
+    align-self: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px 1px grey;
+  }
+  .projects .project-container .project .electronika{
+    box-shadow: none;
+    width: 9rem;
+  }
+  .projects .project-container .project .pixelcraft{
+    width: 19rem;
+    box-shadow: none;
   }
   .projects .project-container .project:hover {
     transform: scale(1.05);
@@ -139,12 +144,11 @@ body {
   .events .events-header {
     text-align: center;
     font-weight: bold;
-    padding: 0 50px;
     text-align: start;
     position: relative;
   }
   .events .events-header h1 {
-    font-size: 50px;
+    font-size: 3rem;
     margin-bottom: 30px;
   }
   .events .events-header p {
@@ -156,11 +160,11 @@ body {
     justify-content: center;
     align-items: space-evenly;
     flex-direction: column;
-    margin: 50px;
+    margin: 3rem;
+    margin-top: 1rem;
   }
   .events .events-container .event {
     color: #fff;
-    height: 9rem;
     border-radius: 20px;
     display: flex;
     transition: 0.5s;
@@ -171,9 +175,16 @@ body {
     margin-left: 0;
     position: relative;
   }
+
+  .events .events-container .event:hover{
+    .img{
+      width: 25%;
+      transition-duration: 0.2s;
+    }
+  }
+
   .events .events-container .event .img {
-    width: 150px;
-    height: 120px;
+    width: 17%;
     margin-right: 20px;
     border: 1px solid #000;
     background-color: #aaa;
@@ -195,6 +206,7 @@ body {
   .events .events-container .event .event-info p {
     font-size: 20px;
     opacity: 0.7;
+    text-align: justify;
   }
   .events .events-container .event .event-date {
     text-align: center;
@@ -204,14 +216,13 @@ body {
   .events .events-container .event::before {
     content: "";
     position: absolute;
-    width: 9.7%;
+    width: 15%;
     background: linear-gradient(90deg, yellow, 20%, #d55);
     height: 5px;
     bottom: -10px;
     left: 0;
     right: 0;
-    transition: width 0.5s ease-out;
-    /* animation: event-footer 3s ease-in-out; */
+    transition: width 0.2s ease-out;
   }
 
   .events .events-container .event:hover::before{
@@ -219,18 +230,7 @@ body {
     width: 90%;
     left: 0;
     right: auto;
-    /* transition: width 1s ease-in-out; */
-    
   }
-  /* @-webkit-keyframes event-footer {
-    0%, 100% {
-      width: 0;
-    }
-    50% {
-      width: 40%;
-    }
-  } */
-
   
   .home-page .alumini {
     width: 100vw;
@@ -412,7 +412,7 @@ body {
   .viewMore {
     position: absolute;
     right: 50px;
-    top: 0;
+    top: 3rem;
     opacity: 0.7;
     cursor: pointer;
     transition: 0.2s;
