@@ -2,11 +2,15 @@ import CoverPage from "../Home/CoverPage";
 import Footer from "../Footer"
 import { alumini01 } from '../Alumni/images';
 import "./Event.css";
+import { Helmet } from 'react-helmet';
 
 const Events = () => {
 
     return (
         <div className="event-individual">
+            <Helmet>
+        <title>BVP-ISTE-Events</title>
+      </Helmet>
             <CoverPage />
             <div className="event-indi-container">
                 <div className="event-indi-header" >

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import { appendScript } from "../../AppendScript";
 import { Box, Image, Text } from "@chakra-ui/react";
 import Navbar from "../Navbar";
@@ -11,6 +12,9 @@ const Project = () => {
   }, []);
   return (
     <Box className="projectPage">
+      <Helmet>
+        <title>BVP-ISTE-Projects</title>
+      </Helmet>
       <div className="cover-page">
         <Navbar />
         <div className="cover-page-content">

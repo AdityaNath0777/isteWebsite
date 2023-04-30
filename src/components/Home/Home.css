@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 200px;
+    height: 46vh;
     margin-top: 300px;
   }
   .cover-page .cover-page-content .cover-page-text {
@@ -54,26 +55,9 @@ body {
     left: 0;
     right: auto;
   }
-  /* @-webkit-keyframes move {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  @keyframes move {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  } */
   
   .projects {
     width: 100vw;
-    height: 100vh;
     color: white;
     background-color: transparent;
     padding: 100px;
@@ -81,18 +65,18 @@ body {
   .projects .projects-header {
     text-align: center;
     font-weight: bold;
-    height: 200px;
-    padding: 50px;
+    height: 9rem;
     padding-top: 0;
     text-align: start;
     position: relative;
   }
   .projects .projects-header h1 {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
   }
   .projects .projects-header p {
     font-size: 20px;
+    font-weight: 400;
   }
   .projects .project-container {
     display: flex;
@@ -109,19 +93,41 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     transition: transform 0.3s ease, background-image 0.3s ease;
-    padding: 20px;
+    padding: 1rem;
     text-align: start;
     border: 1px solid red;
+    margin: 1rem;
     transform: scale(1);
     -webkit-animation: scale 1s ease-in-out forwards;
             animation: scale 1s ease-in-out forwards;
-    cursor: pointer;
+    cursor: default;
   }
   .projects .project-container .project p {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 1rem;
     opacity: 0.7;
     line-height: 30px;
+  }
+  .projects .project-container .project h2{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .projects .project-container .project img{
+       height: 10rem;
+    border-style: none;
+    width: 10rem;
+    align-self: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px 1px grey;
+  }
+  .projects .project-container .project .electronika{
+    box-shadow: none;
+    width: 9rem;
+  }
+  .projects .project-container .project .pixelcraft{
+    width: 19rem;
+    box-shadow: none;
   }
   .projects .project-container .project:hover {
     transform: scale(1.05);
@@ -138,7 +144,6 @@ body {
   .events .events-header {
     text-align: center;
     font-weight: bold;
-    padding: 0 50px;
     text-align: start;
     position: relative;
   }

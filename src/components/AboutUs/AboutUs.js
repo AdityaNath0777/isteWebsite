@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import Navbar from "../Navbar";
 import { appendScript } from "../../AppendScript";
 import "./AboutUs.css";
@@ -21,6 +22,9 @@ const AboutUs = () => {
   )
   return (
     <Box className="aboutPage">
+      <Helmet>
+        <title>BVP-ISTE-About US</title>
+      </Helmet>
       <div className="cover-page">
         <Navbar />
         <div className="cover-page-content">
