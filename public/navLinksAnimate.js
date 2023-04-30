@@ -1,9 +1,10 @@
-const links = document.querySelectorAll('.navbar a');
+// const links = document.querySelectorAll('.navbar a');
 
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        links.forEach(link => link.classList.remove('active'));
-        link.classList.add('active');
-    })
+// links.forEach(link => {
+//     link.addEventListener('click', () => {
+//         links.forEach(link => link.classList.remove('active'));
+//         link.classList.add('active');
+//     })
 
-})
+// })
+console.log('navlinkanimate.js hu main')

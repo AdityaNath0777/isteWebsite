@@ -19,6 +19,7 @@ const Project = () => {
             <span id="animated-text"> doing things</span>
           </div>
           <iframe
+            title="iste-gif"
             src="https://giphy.com/embed/WXmx86CVrJAOEwwjPu"
             width="300"
             height="300"

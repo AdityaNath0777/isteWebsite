@@ -8,7 +8,7 @@ export const AluminiProto = () => {
             </div>
             <div className="alumnus-container">
                 <div className="alumnus">
-                    <img className="img" src = {alumini01} />
+                    <img className="img" src = {alumini01} alt="alumni ki pic"/>
                     <div className="info">
                         <h3>Tiger Sharma</h3>
                         <p>Cheerful, Supporting and lots of fun while growing together. The envinronment is just so cool. Loved to be a part of it.</p>
@@ -16,7 +16,7 @@ export const AluminiProto = () => {
                 </div>
                 <div className="alumnus">
                     {/* <div className="img"></div> */}
-                    <img className="img" src = {alumini02} />
+                    <img className="img" src = {alumini02} alt="alumni ki pic"/>
                     <div className="info">
                         <h3>Gajraaj Rajput</h3>
                         <p>Best envinronment to develop your social, technical and soft skills. All the events organised are insightful and fun. Really grateful to be a part of this wonderful society.</p>
@@ -24,14 +24,14 @@ export const AluminiProto = () => {
                 </div>
                 <div className="alumnus">
                     {/* <div className="img"></div> */}
-                    <img className="img" src = {alumini03} />
+                    <img className="img" src = {alumini03} alt="alumni ki pic"/>
                     <div className="info">
                         <h3>Mayur Singh</h3>
                         <p>From being a member to executive and then vice-chairperson of the society, I was very grateful for all the support given to me. Thanks a lot everyone.</p>
                     </div>
                 </div>
             </div>
-            <button id="joinUs">Join Us</button>
+            {/* <button id="joinUs">Join Us</button> */}
         </div>
     )
 }

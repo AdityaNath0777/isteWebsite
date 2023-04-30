@@ -1,0 +1,18 @@
+.alumni-page{
+    background-color: #000 !important;
+    
+}
+.alumni-bg{
+    padding: 100px 200px 0 200px;
+    width: 100vw;
+    height: max-content;
+    /* background: #000; */
+    background-blend-mode: overlay !important;
+}
+
+.alumni-bg .alumini-header h1, .alumini-header h3{
+    color: #fff !important;
+}
+.alumni-bg .alumnus .info{
+    color:#fff !important;
+}
