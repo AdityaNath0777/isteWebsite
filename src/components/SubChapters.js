@@ -1,10 +1,10 @@
 import {softech} from './Alumni/images';
-export const ProjectsProto = () => {
+export const SubChaptersProto = () => {
     return (
         <div className="projects">
             <div className="projects-header">
                 <h1>Student Interests Groups (SIG)</h1>
-                <p>Here are some projects that we have worked on:</p>
+                <p>Different Sub Chapters of BVP-ISTE</p>
             </div>
             <div className="project-container">
                 <div className="project">

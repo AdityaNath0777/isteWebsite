@@ -143,7 +143,7 @@ const AboutUs = () => {
             </Text>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           className="workSection"
           display={"flex"}
           w="100%"
@@ -200,7 +200,7 @@ const AboutUs = () => {
               <Text>JKL</Text>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </div>
 
       <div className="footer">

@@ -3,24 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar{
+  padding: 4rem 0rem 0rem 10rem;
+    height: 3rem;
+}
 .nav-container li{
   list-style: none;
 }
 
-.cover-page .navbar {
+.cover-page .navbar .nav-container .nav-list {
   background-color: #fff;
   color: #000;
-  padding: 10px 100px;
+  padding: 0.7rem 3rem;
   border: 1px solid #000;
   width: 60%;
-  margin: 0 auto;
-  border-radius: 50px;
-  position: absolute;
-  left: 20%;
-  top: 5%;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.cover-page .navbar .nav-container {
+.navbar .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,4 +41,8 @@
 }
 .nav-container .active{
   background-size: 100% 3px;
+}
+
+.nav-container .istelogo_nav{
+  width:7rem
 }
